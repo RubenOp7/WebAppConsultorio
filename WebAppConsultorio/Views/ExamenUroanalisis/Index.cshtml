@@ -1,0 +1,171 @@
+﻿@model IEnumerable<WebAppConsultorio.Models.ExamenUroanalisi>
+
+@{
+    ViewData["Title"] = "Listado Uroanalisis";
+}
+
+<h1>Examenes de Uroanalisis</h1>
+
+<p>
+    <a asp-action="Create">Registar Examen</a>
+</p>
+<div class="wrap">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Fecha)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.IdDoctorNavigation)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.IdPacienteNavigation)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Color)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Olor)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Aspecto)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Sedimento)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.GravedadEspecifica)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Reaccion)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Ph)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SustanciasProteicas)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SustanciasReductoras)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SangreOculta)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CuerposCetonicos)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Acascorbico)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Urobilinogeno)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Bilirrubinas)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Nitritos)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Cilindros)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Leucocitos480)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.LeucocitosGrumos)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Entrocitos480)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CelulasEpiteliales)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Fecha)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IdDoctorNavigation.Nombre) @Html.DisplayFor(modelItem => item.IdDoctorNavigation.Apellido)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IdPacienteNavigation.Nombre) @Html.DisplayFor(modelItem => item.IdPacienteNavigation.Apellido)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Color)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Olor)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Aspecto)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Sedimento)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.GravedadEspecifica)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Reaccion)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Ph)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SustanciasProteicas)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SustanciasReductoras)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SangreOculta)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CuerposCetonicos)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Acascorbico)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Urobilinogeno)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Bilirrubinas)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nitritos)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Cilindros)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Leucocitos480)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.LeucocitosGrumos)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Entrocitos480)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CelulasEpiteliales)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.IdExamenUro">Editar</a> |
+                        <a asp-action="Details" asp-route-id="@item.IdExamenUro">Detalles</a> |
+                        <a asp-action="Delete" asp-route-id="@item.IdExamenUro">Eliminar</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+

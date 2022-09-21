@@ -1,0 +1,76 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = null;
+}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sign-in/">
+
+    
+
+    <!-- Bootstrap core CSS -->
+<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @@media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="~/css/signin.css" rel="stylesheet" />
+  </head>
+<body class="text-center">
+
+    <main class="form-signin" style="background-image: linear-gradient(darkblue, WHITE);">
+  <form method="post" action="@Url.Action("Login","Usuarios")">
+            <img class="mb-4" src="https://static.vecteezy.com/system/resources/previews/002/318/271/original/user-profile-icon-free-vector.jpg" alt="" width="170" height="170">
+    <h1 style="color:white" class="h3 mb-3 fw-normal">Porfavor ingrese sus credenciales</h1>
+
+    <div class="form-floating" style="margin-bottom: 10px">
+      <input type="text" name="Usuario1" class="form-control" id="floatingInput" placeholder="Usuario">
+      <label for="floatingInput">Usuario</label>
+    </div>
+    <div class="form-floating">
+      <input type="password" name="Contrasena" class="form-control" id="floatingPassword" placeholder="Password">
+      <label for="floatingPassword">Password</label>
+    </div>
+
+@*    <div class="checkbox mb-3">
+      <label>
+        <input type="checkbox" value="remember-me"> Recordarme
+      </label>
+    </div>*@
+    <button class="w-100 btn btn-lg btn-primary" type="submit">Inicar Sesion</button>
+    <p style="color:white;">@ViewData["Mensaje"]</p>
+  </form>
+        <a class="nav-link" asp-area="" asp-controller="Usuarios" asp-action="Create">Crear nueva cuenta</a>
+</main>
+
+
+    
+</body>
+</html>

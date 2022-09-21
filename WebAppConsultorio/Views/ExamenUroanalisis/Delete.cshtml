@@ -1,0 +1,157 @@
+﻿@model WebAppConsultorio.Models.ExamenUroanalisi
+
+@{
+    ViewData["Title"] = "Eliminar Examen";
+}
+
+<h3>Estas seguro?</h3>
+<div>
+    <h4>ExamenUroanalisi</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Fecha)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Fecha)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Color)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Color)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Olor)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Olor)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Aspecto)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Aspecto)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Sedimento)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Sedimento)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.GravedadEspecifica)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.GravedadEspecifica)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Reaccion)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Reaccion)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Ph)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Ph)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SustanciasProteicas)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SustanciasProteicas)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SustanciasReductoras)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SustanciasReductoras)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SangreOculta)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SangreOculta)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CuerposCetonicos)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CuerposCetonicos)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Acascorbico)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Acascorbico)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Urobilinogeno)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Urobilinogeno)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Bilirrubinas)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Bilirrubinas)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nitritos)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nitritos)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Cilindros)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Cilindros)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Leucocitos480)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Leucocitos480)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LeucocitosGrumos)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LeucocitosGrumos)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Entrocitos480)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Entrocitos480)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CelulasEpiteliales)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CelulasEpiteliales)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IdDoctorNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IdDoctorNavigation.IdDoctor)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IdPacienteNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IdPacienteNavigation.IdPaciente)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="IdExamenUro" />
+        <input type="submit" value="Eliminar" class="btn btn-danger" /> |
+        <a asp-action="Index">Volver</a>
+    </form>
+</div>

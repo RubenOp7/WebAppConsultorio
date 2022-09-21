@@ -1,0 +1,41 @@
+﻿@model IEnumerable<WebAppConsultorio.Models.Usuario>
+
+@{
+    ViewData["Title"] = "Listado Usuarios";
+}
+
+<h1>Usuarios</h1>
+
+@*<p>
+    <a asp-action="Create">Create New</a>
+</p>*@
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Usuario1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Contrasena)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Usuario1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Contrasena)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdUsuario">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.IdUsuario">Detalles</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdUsuario">Eliminar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

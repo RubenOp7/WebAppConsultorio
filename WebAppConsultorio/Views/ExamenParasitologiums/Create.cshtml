@@ -1,0 +1,121 @@
+﻿@model WebAppConsultorio.Models.ExamenParasitologium
+
+@{
+    ViewData["Title"] = "Registrar Examen";
+}
+
+<h1>Create</h1>
+
+<h4>Examen Parasitologia</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="IdPaciente" class="control-label"></label>
+                <select asp-for="IdPaciente" class ="form-control" asp-items="ViewBag.IdPaciente"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdDoctor" class="control-label"></label>
+                <select asp-for="IdDoctor" class ="form-control" asp-items="ViewBag.IdDoctor"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Fecha" class="control-label"></label>
+                <input asp-for="Fecha" class="form-control" />
+                <span asp-validation-for="Fecha" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Color" class="control-label"></label>
+                <input asp-for="Color" class="form-control" />
+                <span asp-validation-for="Color" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Consistencia" class="control-label"></label>
+                <input asp-for="Consistencia" class="form-control" />
+                <span asp-validation-for="Consistencia" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AscarisLumbricoides" class="control-label"></label>
+                <input asp-for="AscarisLumbricoides" class="form-control" />
+                <span asp-validation-for="AscarisLumbricoides" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AncylostomaDondenale" class="control-label"></label>
+                <input asp-for="AncylostomaDondenale" class="form-control" />
+                <span asp-validation-for="AncylostomaDondenale" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NecatorAmericano" class="control-label"></label>
+                <input asp-for="NecatorAmericano" class="form-control" />
+                <span asp-validation-for="NecatorAmericano" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EnterabiusVermicular" class="control-label"></label>
+                <input asp-for="EnterabiusVermicular" class="form-control" />
+                <span asp-validation-for="EnterabiusVermicular" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TrichurisTrichura" class="control-label"></label>
+                <input asp-for="TrichurisTrichura" class="form-control" />
+                <span asp-validation-for="TrichurisTrichura" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EntamoebaColi" class="control-label"></label>
+                <input asp-for="EntamoebaColi" class="form-control" />
+                <span asp-validation-for="EntamoebaColi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EntamoebaHistolitica" class="control-label"></label>
+                <input asp-for="EntamoebaHistolitica" class="form-control" />
+                <span asp-validation-for="EntamoebaHistolitica" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GiardiaLamblia" class="control-label"></label>
+                <input asp-for="GiardiaLamblia" class="form-control" />
+                <span asp-validation-for="GiardiaLamblia" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TrichomonasHomunis" class="control-label"></label>
+                <input asp-for="TrichomonasHomunis" class="form-control" />
+                <span asp-validation-for="TrichomonasHomunis" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TaeniaSaguiata" class="control-label"></label>
+                <input asp-for="TaeniaSaguiata" class="form-control" />
+                <span asp-validation-for="TaeniaSaguiata" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TaeniaSalium" class="control-label"></label>
+                <input asp-for="TaeniaSalium" class="form-control" />
+                <span asp-validation-for="TaeniaSalium" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HymenolepisNana" class="control-label"></label>
+                <input asp-for="HymenolepisNana" class="form-control" />
+                <span asp-validation-for="HymenolepisNana" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HymenolepisDiminuta" class="control-label"></label>
+                <input asp-for="HymenolepisDiminuta" class="form-control" />
+                <span asp-validation-for="HymenolepisDiminuta" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Observaciones" class="control-label"></label>
+                <input asp-for="Observaciones" class="form-control" />
+                <span asp-validation-for="Observaciones" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Volver</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

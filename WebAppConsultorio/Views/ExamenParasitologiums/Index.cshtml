@@ -1,0 +1,146 @@
+﻿@model IEnumerable<WebAppConsultorio.Models.ExamenParasitologium>
+
+@{
+    ViewData["Title"] = "Examenes";
+}
+
+<h1>Examenes de Parasitologia</h1>
+
+<p>
+    <a asp-action="Create">Registrar Examen</a>
+</p>
+
+<div class="wrap">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Fecha)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.IdDoctorNavigation)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.IdPacienteNavigation)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Color)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Consistencia)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.AscarisLumbricoides)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.AncylostomaDondenale)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.NecatorAmericano)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.EnterabiusVermicular)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TrichurisTrichura)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.EntamoebaColi)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.EntamoebaHistolitica)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.GiardiaLamblia)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TrichomonasHomunis)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TaeniaSaguiata)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TaeniaSalium)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.HymenolepisNana)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.HymenolepisDiminuta)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Observaciones)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Fecha)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IdDoctorNavigation.Nombre) @Html.DisplayFor(modelItem => item.IdDoctorNavigation.Apellido)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IdPacienteNavigation.Nombre) @Html.DisplayFor(modelItem => item.IdPacienteNavigation.Apellido)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Color)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Consistencia)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AscarisLumbricoides)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AncylostomaDondenale)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NecatorAmericano)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EnterabiusVermicular)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TrichurisTrichura)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EntamoebaColi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EntamoebaHistolitica)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GiardiaLamblia)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TrichomonasHomunis)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TaeniaSaguiata)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TaeniaSalium)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.HymenolepisNana)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.HymenolepisDiminuta)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Observaciones)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.IdExamenParasito">Editar</a> |
+                    <a asp-action="Details" asp-route-id="@item.IdExamenParasito">Detalles</a> |
+                    <a asp-action="Delete" asp-route-id="@item.IdExamenParasito">Eliminar</a>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>

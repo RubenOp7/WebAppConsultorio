@@ -1,0 +1,132 @@
+﻿@model WebAppConsultorio.Models.ExamenParasitologium
+
+@{
+    ViewData["Title"] = "Detalles Examen";
+}
+
+<h1>Detalles</h1>
+
+<div>
+    <h4>Examen Parasitologia</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Fecha)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Fecha)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Color)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Color)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Consistencia)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Consistencia)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AscarisLumbricoides)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AscarisLumbricoides)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AncylostomaDondenale)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AncylostomaDondenale)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NecatorAmericano)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NecatorAmericano)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EnterabiusVermicular)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EnterabiusVermicular)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TrichurisTrichura)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TrichurisTrichura)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EntamoebaColi)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EntamoebaColi)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EntamoebaHistolitica)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EntamoebaHistolitica)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.GiardiaLamblia)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.GiardiaLamblia)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TrichomonasHomunis)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TrichomonasHomunis)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TaeniaSaguiata)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TaeniaSaguiata)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TaeniaSalium)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TaeniaSalium)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HymenolepisNana)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HymenolepisNana)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HymenolepisDiminuta)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HymenolepisDiminuta)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Observaciones)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Observaciones)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IdDoctorNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IdDoctorNavigation.IdDoctor)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IdPacienteNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IdPacienteNavigation.IdPaciente)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.IdExamenParasito">Editar</a> |
+    <a asp-action="Index">Volver</a>
+</div>

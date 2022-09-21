@@ -1,0 +1,110 @@
+﻿@model WebAppConsultorio.Models.Usuario
+
+@{
+    ViewData["Title"] = "Nuevo Usuario";
+}
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Registrar Usuario</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/bootDarkly.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/WebAppConsultorio.styles.css" asp-append-version="true" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sign-in/">
+
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+
+        .center{
+            background-image: linear-gradient(darkblue, WHITE);
+            text-align: center;
+            padding: 40px
+        }
+
+        .bd-placeholder-img {
+          font-size: 1.125rem;
+          text-anchor: middle;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          user-select: none;
+        }
+
+        @@media (min-width: 768px) {
+          .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+          }
+        }
+    </style>
+
+
+    <!-- Custom styles for this template -->
+    <link href="~/css/signin.css" rel="stylesheet" />
+</head>
+
+@*<h1>Registrarse</h1>
+
+<h4>Usuario</h4>*@
+<hr />
+<main class="form-signin">
+        <div class="center">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+@*                <img class="mb-4" src="https://static.vecteezy.com/system/resources/previews/002/318/271/original/user-profile-icon-free-vector.jpg" alt="" width="170" height="170">
+*@              <h1 style="color:white" class="h3 mb-3 fw-normal">Porfavor ingrese los datos para la nueva cuenta</h1>
+
+                <div class="form-floating" style="margin-bottom: 10px">
+                    <label asp-for="Usuario1" class="control-label"></label>
+                    <input asp-for="Usuario1" class="form-control" />
+                    <span asp-validation-for="Usuario1" class="text-danger"></span>
+                </div>
+                <div style="margin-bottom: 10px" class="form-floating">
+                    <label asp-for="Contrasena" class="control-label"></label>
+                    <input type="" asp-for="Contrasena" class="form-control" />
+                    <span asp-validation-for="Contrasena" class="text-danger"></span>
+                </div>
+
+                @*    <div class="checkbox mb-3">
+                <label>
+                <input type="checkbox" value="remember-me"> Recordarme
+                </label>
+                </div>*@
+                <div class="form-group">
+                <input type="submit" value="Registrarse" class="w-100 btn btn-lg btn-primary" />
+                </div>
+            <a class="nav-link" asp-area="" asp-controller="Usuarios" asp-action="Login">Volver</a>
+
+                <p style="color:white;">@ViewData["Mensaje"]</p>
+            </form>
+@*            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-floating">
+                    <label asp-for="Usuario1" class="control-label"></label>
+                    <input asp-for="Usuario1" class="form-control" />
+                    <span asp-validation-for="Usuario1" class="text-danger"></span>
+                </div>
+                <div class="form-floating">
+                    <label asp-for="Contrasena" class="control-label"></label>
+                    <input asp-for="Contrasena" class="form-control" />
+                    <span asp-validation-for="Contrasena" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Registrarse" class="btn btn-primary" />
+                </div>
+            </form>*@
+        </div>
+
+</main>
+
+@*<div>
+    <a asp-action="Index">Back to List</a>
+</div>*@
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
