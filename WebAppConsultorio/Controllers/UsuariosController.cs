@@ -21,13 +21,19 @@ namespace WebAppConsultorio.Controllers
         }
 
         // GET: Acceso
-        public ActionResult Login()
+        public async Task<ActionResult> LoginAsync()
         {
+            ServiceReference1.Tipo_Cambio_BCNSoapClient Cliente = new ServiceReference1.Tipo_Cambio_BCNSoapClient(ServiceReference1.Tipo_Cambio_BCNSoapClient.EndpointConfiguration.Tipo_Cambio_BCNSoap);
+            ServiceReference1.RecuperaTC_DiaRequest DiaReq = new ServiceReference1.RecuperaTC_DiaRequest(2022, 10, 01);
+            var response = await Cliente.RecuperaTC_DiaAsync(DiaReq);
+            Console.WriteLine(response);
+            ViewData["TCDIA"] = string.Concat("Primero de Octubre: ", response.RecuperaTC_DiaResult);
             return PartialView();
         }
         [HttpPost]
         public async Task<IActionResult> Login(Usuario user)
         {
+
             if(user.Contrasena == null || user.Usuario1 == null)
             {
                 ViewData["Mensaje"] = "Llenar todos los campos";
